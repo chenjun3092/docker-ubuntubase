@@ -26,11 +26,11 @@ RUN TERM=linux apt-get update && TERM=linux apt-get -y -q install \
 
 # get latest stable etcdctl (client only)
 # need to extract it from etcd package
-ADD https://github.com/coreos/etcd/releases/download/v2.2.0/etcd-v2.2.0-linux-amd64.tar.gzhttps://github.com/coreos/etcd/releases/download/v2.2.0/etcd-v2.2.0-linux-amd64.tar.gz /opt/sources/
-RUN tar xzf /opt/sources/etcd-v2.2.0-linux-amd64.tar.gz -C /usr/local/bin etcd-v2.2.0-linux-amd64/etcdctl --strip-components=1 && \
-	rm /opt/sources/etcd-v2.2.0-linux-amd64.tar.gz
+ADD https://github.com/coreos/etcd/releases/download/v2.2.2/etcd-v2.2.2-linux-amd64.tar.gz /opt/sources/
+RUN tar xzf /opt/sources/etcd-v2.2.2-linux-amd64.tar.gz -C /usr/local/bin etcd-v2.2.2-linux-amd64/etcdctl --strip-components=1 && \
+	rm /opt/sources/etcd-v2.2.2-linux-amd64.tar.gz
 
 # get latest stable confd
 # ADD will always add downloaded files with a 600 permission
-ADD https://github.com/kelseyhightower/confd/releases/download/v0.10.0/confd-0.10.0-linux-amd64 /usr/local/bin/confd
+ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-linux-amd64 /usr/local/bin/confd
 RUN chmod +x /usr/local/bin/confd
