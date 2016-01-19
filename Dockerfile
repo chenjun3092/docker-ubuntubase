@@ -32,5 +32,5 @@ RUN tar xzf /opt/sources/etcd-v2.2.4-linux-amd64.tar.gz -C /usr/local/bin etcd-v
 
 # get latest stable confd
 # ADD will always add downloaded files with a 600 permission
-ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-linux-amd64 /usr/local/bin/confd
+ADD https://github.com/kelseyhightower/confd/releases/download/v0.11.0/confd-0.11.0-linux-amd64 /usr/local/bin/confd
 RUN chmod +x /usr/local/bin/confd
