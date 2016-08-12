@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t docker/ubuntubaseimage .
+docker build -t docker/ubuntubase .
